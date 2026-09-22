@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "shape_dhw": [384, 200, 200],
+  "spacing_mm": 2.0,
+  "sad_mm": 1000.0,
+  "plane_origin_offset_mm": null,
+  "segment_native_size": 400,
+  "align_bev_z_to_ct_slices": true,
+  "bicubic_z_align": true,
+  "bicubic_z_align_backend": "triton"
+}

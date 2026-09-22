@@ -1,0 +1,23 @@
+{
+    "seed": 2034,
+    "patch_size": [
+        64,
+        160,
+        160
+    ],
+    "batch_size": 2,
+    "num_workers": 8,
+    "prefetch_factor": 2,
+    "maximum_epochs": 1000,
+    "validation_volume_freq": 0,
+    "snapshot_freq": 100,
+    "validation_metric": "L1",
+    "generator_learning_rate": 0.0001,
+    "generator_image_criterion": "MSE",
+    "generator_optimizer": "AdamW",
+    "discriminator_learning_rate": 0.0001,
+    "discriminator_optimizer": "Adam",
+    "discriminator_criterion": "MSE",
+    "lambda_generator_discriminator": 100,
+    "learning_rate_scheduler": "None"
+}

@@ -1,0 +1,31 @@
+# Versions pinned to match the training environment
+# (DL-segment-dose-calculation/docker/Dockerfile), so inference runs on the same
+# stack the checkpoint was trained against.
+#
+# torch is NOT listed here: it must come from the cu128 index, and the Dockerfile
+# installs `torch==2.8.0` from https://download.pytorch.org/whl/cu128 first.
+# That also supplies triton, which the CT-space packed-coefficient sampler and the
+# mLSTM limit-chunk kernel compile against.
+
+# numpy stays on training's 1.26.4 rather than floating to 2.x: beam geometry and
+# aperture construction are numpy, and NEP 50 changed scalar type promotion.
+numpy==1.26.4
+
+# BEV resampling and the aperture projection ElementwiseKernel.
+cupy-cuda12x==13.6.0
+
+# .mha read/write.
+simpleitk==2.3.1
+
+# ISA-L exposes a zlib-compatible stream and is selected automatically by the
+# parallel MHA writers. The stdlib zlib implementation remains a runtime
+# fallback if this optional acceleration is unavailable.
+isal==1.8.0
+
+# Imported only by the opt-in DOSERAD_PROFILE mode. Normal inference never
+# imports NVML or starts a sampler thread.
+nvidia-ml-py
+
+# Inference server (required by the Grand Challenge runtime contract).
+fastapi
+uvicorn
