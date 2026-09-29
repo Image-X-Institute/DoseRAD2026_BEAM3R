@@ -2,6 +2,8 @@
 
 **Beam's-eye-view architecture with Mamba-3 for implicit dose reconstruction**
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23041738.svg)](https://doi.org/10.5281/zenodo.23041738)
+
 BEAM3R is a beam's-eye-view (BEV) deep-learning framework for rapid photon control-point and proton beamlet dose prediction, developed for the **DoseRAD2026 Grand Challenge**. The BEAM3R submission won both photon tasks, for dose calculation on CT and MRI.
 
 BEAM3R combines a 2D CNN encoder-decoder with Mamba-3 depth-sequence modelling to capture long-range radiation transport without expensive 3D convolutions. Implicit super-resolution enables high-resolution dose prediction while keeping the main sequence computation at lower spatial resolution, with custom Triton inference kernels to reduce memory traffic and latency.
@@ -10,6 +12,7 @@ Photon models use bidirectional Mamba-3. Proton models use forward Mamba-3 with 
 
 - **Paper:** [arXiv:2609.04747](https://arxiv.org/abs/2609.04747)
 - **Dataset:** [DoseRAD2026](https://doserad2026.grand-challenge.org/data/)
+- **Archived release:** [10.5281/zenodo.23041738](https://doi.org/10.5281/zenodo.23041738)
 
 ## Pipelines
 

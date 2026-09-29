@@ -15,9 +15,10 @@ type: software
 version: 1.0.0
 license: Apache-2.0
 repository-code: https://github.com/Image-X-Institute/DoseRAD2026_BEAM3R
-# TODO: set to the release date, and add the Zenodo concept DOI once minted:
-# doi: 10.5281/zenodo.XXXXXXX
-date-released: 2026-09-30
+# Zenodo concept DOI: always resolves to the newest archived version.
+# The v1.0.0 version DOI is 10.5281/zenodo.23041739.
+doi: 10.5281/zenodo.23041738
+date-released: 2026-09-29
 keywords:
   - radiotherapy
   - dose calculation
